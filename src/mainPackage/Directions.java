@@ -15,7 +15,7 @@ public class Directions {
 	private char floor;
 	private String locationOnFloor = null;
 
-
+// lol
 /*===========================SET AND GET======================================*/
 	public void setBuilding(char building) {
 		this.building = building;
