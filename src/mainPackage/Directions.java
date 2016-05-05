@@ -43,18 +43,18 @@ public class Directions {
 		/*=================VERIFICATION BLOCK=====================*/
 		if (room.length() != ROOM_LENGTH) {	//If we enter a room which doesn't respect the IT Standards.
 			this.playit("WRONGROOMLENGHT");
-			delayfor(10);
+			delayfor(17);
 			return false;
 		}
 		if (Character.isLetter(room.charAt(1)) == false) {
 			this.playit("WRONGMUSTSTARTWITHLETTER");
-			delayfor(10);
+			delayfor(27);
 			return false; // room must start with a letter
 		}
 		for (int i = 2; i < ROOM_LENGTH; i++) {
 			if (Character.isDigit(room.charAt(i)) == false) {
 				this.playit("WRONGNUMBERSONLY");
-				delayfor(10);
+				delayfor(24);
 				return false; // room must be composed by numbers only.
 			}
 		}
@@ -77,19 +77,19 @@ public class Directions {
 		case 'A':
 			directions = "From reception, walk straight ahead and then turn to your right. The block A is this part of the IT Sligo.";
 			this.playit("BUILDINGA");
-			delayfor(10);
+			delayfor(67);
 			break;
 		case 'B':
 			if(choice == false){
 				directions = "From reception, go up main stairs on your left and turn right.  Walk for 40m past Library until you read the Booknest";
 				this.playit("BUILDINGB");
-				delayfor(10);
+				delayfor(65);
 				break;
 			}
 			else{
 				directions = "From reception, take the lift on your left and go to the first floor. Then turn right. Walk for 40m past Library until you read the Booknest";
 				this.playit("BUILDINGBD");
-				delayfor(10);
+				delayfor(68);
 				break;
 			}
 			
@@ -97,42 +97,42 @@ public class Directions {
 			if(choice == false){
 				directions = "From reception, go up main stairs on your left and turn right.  Walk for 40m past Library until you read the Booknest, then turn left and conrinute through long corridor";
 				this.playit("BUILDINGC");
-				delayfor(10);
+				delayfor(70);
 				break;
 			}
 			else{
 				directions = "From reception, take the lift on your left and go to the first floor. Then turn right.  Walk for 40m past Library until you read the Booknest, then turn left and conrinute through long corridor";
 				this.playit("BUILDINGCD");
-				delayfor(10);
+				delayfor(79);
 				break;
 			}
 		case 'D':
 			if(choice == false){
 				directions = "From reception, go up main stairs on your left and turn right.  Walk for 40m past Library until you read the Booknest, then turn left and conrinute through long corridor";
 				this.playit("BUILDINGD");
-				delayfor(10);
+				delayfor(73);
 				break;
 			}
 			else{
 				directions = "From reception, take the lift on your left and turn right.  Walk for 40m past Library until you read the Booknest, then turn left and conrinute through long corridor";
 				this.playit("BUILDINGDD");
-				delayfor(10);
+				delayfor(68);
 				break;
 			}
 		case 'E':
-			directions = "From reception, move the the centre of reception and turn left into the engineering building";
+			directions = "From reception, move to the center of reception and turn left into the engineering building";
 			this.playit("BUILDINGE");
-			delayfor(10);
+			delayfor(46);
 			break;
 		case 'F':
 			directions = "From reception, walk outside and turn to your right. Walk past the engineering building and the F block is straigt in front";
 			this.playit("BUILDINGF");
-			delayfor(10);
+			delayfor(61);
 			break;
 		default:
 			directions = "Ooops ! it seems that the building you're looking for doesn't exist !";
 			this.playit("BUILDINGUNKNOWN");
-			delayfor(10);
+			delayfor(30);
 			break;
 		}
 		return(directions);
@@ -147,38 +147,38 @@ public class Directions {
 		case '0':
 			directions = "Stay on this floor";
 			this.playit("FLOOR0");
-			delayfor(10);
+			delayfor(18);
 			break;
 		case '1':
 			if(choice == false){
 				directions = "Ascend the stairs to the first floor";
 				this.playit("FLOOR1");
-				delayfor(10);
+				delayfor(19);
 				break;
 			}
 			else{
 				directions = "Take the lift to the first floor";
 				this.playit("FLOOR1D");
-				delayfor(10);
+				delayfor(16);
 				break;
 			}
 		case '2':
 			if(choice == false){
 				directions = "Ascend two flight of stairs to the second floor";			
 				this.playit("FLOOR2");
-				delayfor(10);
+				delayfor(28);
 				break;
 			}
 			else{
 				directions = "Take the lift to the second floor";			
 				this.playit("FLOOR2D");
-				delayfor(10);
+				delayfor(23);
 				break;
 			}
 		default:
 			directions = "Oops ! It seems that the floor " + this.floor + " doesn't exist !";
 			this.playit("FLOORUNKNOWN");
-			delayfor(10);
+			delayfor(22);
 			break;
 		}
 		return(directions);
@@ -192,27 +192,27 @@ public class Directions {
 		case "006":
 			directions = "This is a room to the right on this level";
 			this.playit("ROOM6");
-			delayfor(10);
+			delayfor(22);
 			break;
 		case "007":
 			directions = "This is a room to the right on this level";			
 			this.playit("ROOM7");
-			delayfor(10);
+			delayfor(24);
 			break;
 		case "003":
 			directions = "This is the last room to the right on this level";			
 			this.playit("ROOM3");
-			delayfor(10);
+			delayfor(17);
 			break;
 		case "004":
 			directions = "This is the second last room to the right on this level";			
 			this.playit("ROOM4");
-			delayfor(10);
+			delayfor(25);
 			break;
 		default:
 			directions = "Oops ! It seems that this room doesn't exist !";
 			this.playit("ROOMUNKNOWN");
-			delayfor(10);
+			delayfor(28);
 			break;
 		}
 		return(directions);

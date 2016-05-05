@@ -26,7 +26,7 @@ public class QRCodeMain {
 		@SuppressWarnings("unused")
 		GUI mygui = new GUI();
 		// Initial Hard coded data
-		String qrCodeData = "Day: Tuesday\nTime: 09h00 to 11h00\nSubject: Embedded\nRoom: A1004";
+		String qrCodeData = "Day:Tuesday\nTime:09h00 to 11h00\nSubject:Embedded\nRoom: D2004";
 		String filePath = "myQRCode.png";
 		
 		Map hintMap = new HashMap();

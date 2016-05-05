@@ -111,14 +111,16 @@ public class GUI{
 	  		String theTime = room.gettime(QRCodeMain.QRData);
 	  		String theRoom = room.getroom(QRCodeMain.QRData);
 	  		//Print a Recap' of the course read:
-	  		textField7.setText ("The" + theSubject + " course you're looking for is dispended on" + theDay + " at" + theTime + " in" + theRoom + ".");
+	  		textField7.setText ("The " + theSubject + " course you're looking for is dispended on " + theDay + " at " + theTime + " in" + theRoom + ".");
 	  		// If the room given is incorrect...
 	  		if (directions.validate(theRoom) == false) {
 	  			textField2.setText ("This room doesn't exist or is mispelled");
+	  			textField7.setText ("The course you're looking for may be mispelled");
+	  			textField6.setText ("A QR Image has been created in your Explorer, even if it leads to a wrong room ;) !");
 	  		}
 	  		else {
 	  			//Give directions
-	  			textField2.setText (" Here is your route to" + theSubject + " !");
+	  			textField2.setText (" Here is your route to " + theSubject + " !");
 	  			textField3.setText (directions.toBuilding());
 	  			textField4.setText (directions.toFloor());
 	  			textField5.setText (directions.toLocation());
